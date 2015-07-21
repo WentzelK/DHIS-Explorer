@@ -27,7 +27,7 @@ listIndicators <- c("Antenatal 1st visit before 20 weeks rate",
                     "Xpert TB results turn-around time under 48 hours rate")
 
 indicatorRaw <- read.csv("./data/indicators.csv") #load Indicators
-indicatorRaw <- indicatorRaw[,c("OrgUnit05","IndicatorName","yPeriod","mPeriod","NumxFactor","DenominatorValue")] #trim fields from flatsheet
+indicatorRaw <- indicatorRaw[,c("OrgUnit05","IndicatorName","yPeriod","mPeriod","NumxFactor","DenominatorValue")] #trim fields from raw data
 indicatorRaw <- subset(indicatorRaw, indicatorRaw$IndicatorName %in% listIndicators) #cut out indicators we are not interested in
 
 
